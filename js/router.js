@@ -12,25 +12,34 @@ import top from '../vue/top.vue';
 import middle from '../vue/middle.vue';
 import bottom from '../vue/bottom.vue';
 
+
 //三级
-import top_logo from '../vue/top_logo.vue';
-import top_left from '../vue/top_left.vue';
-import top_right from '../vue/top_right.vue';
+import middle_up from '../vue/middle_up.vue';
+import middle_down from '../vue/middle_down.vue';
+
+//四级
+
+
 
 
 var router = new VueRouter({
-	routes:[
+	routes:[//二级
 		{
-			path: "/*", components: {
+			path: "/*", 
+			components: {
 				"top": top,
 				"middle": middle,
 				"bottom": bottom
 			},
-			children: [
-				{path: "/*", components: {
-					"top_left": top_left,
-					"top_right": top_right
+			children: [ //三级
+				{
+					path: "/*",
+					components: {
+						"middle_up": middle_up,
+						"middle_down": middle_down
 					},
+					children: [//四级
+					]
 				}
 			]
 		}

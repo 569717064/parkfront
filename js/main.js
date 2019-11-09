@@ -1,5 +1,6 @@
  import $ from 'jquery';
 import 'bootstrap3/dist/css/bootstrap.min.css';
+import 'bootstrap3/dist/js/bootstrap.min.js';
 import layer from 'layui-layer';
 import axios from 'axios';
 import Vue from 'vue/dist/vue.js';
