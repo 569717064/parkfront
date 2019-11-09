@@ -8,9 +8,14 @@
 			<a href="#">根本不知道&nbsp;&nbsp;</a>
 			<a href="#">想写啥写啥&nbsp;&nbsp;</a>
 			<a href="#">你开心就好&nbsp;&nbsp;</a>
+			<a href="#">不知道说啥&nbsp;&nbsp;</a>
+			<a href="#">随性而为之&nbsp;&nbsp;</a>
 		</div>
 		<div id="mmiddle_up_search">
-			
+			<div class="input-group" style="margin-top: 40px;">
+				<label class="input-group-addon">搜索</label>
+			  <input placeholder="请输入" style="height: 50px;font-size: 20px;width: 200px;">
+			</div>
 		</div>
 	</div>
 </template>
@@ -36,21 +41,23 @@
 	#middle_up_logo {
 		height: 100%;
 		float: left;
+		margin-left: -167px;
 	}
 	#middle_up_menu {
-		width: 500px;
+		width: 710px;
 		height: 100%;
 		float: left;
 	}
 	#mmiddle_up_search {
-		background-color: cornsilk;
-		float: left;
-		width: 200px;
+		float: right;
+		width: 260px;
 		height: 100%;
+		margin-right: -130px;
 	}
 	a {
 		float: left;
 		margin-top: 50px;
 		font-size: 20px;
+		color: #000000;
 	}
 </style>

@@ -1,6 +1,6 @@
 <template>
 	<div id="bottom">
-		<span>蜗牛共享车位项目小组版权所有</span>
+		<span>蜗牛共享车位项目小组&copy;版权所有</span>
 	</div>
 </template>
 
