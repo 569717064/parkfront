@@ -4,17 +4,15 @@ Vue.use(VueRouter);
 
 
 
-
-
+//一级
+import App from '../vue/App.vue';
 
 //二级
-import top from '../vue/top.vue';
 import middle from '../vue/middle.vue';
-import bottom from '../vue/bottom.vue';
+import login from '../vue/login.vue';
 
 
 //三级
-import middle_up from '../vue/middle_up.vue';
 import middle_down from '../vue/middle_down.vue';
 
 //四级
@@ -23,26 +21,16 @@ import middle_down from '../vue/middle_down.vue';
 
 
 var router = new VueRouter({
-	routes:[//二级
+	routes: [
+		{path: "/", component: middle, redirect: "/App"},
+		{path: "/login", component: login},
 		{
-			path: "/*", 
-			components: {
-				"top": top,
-				"middle": middle,
-				"bottom": bottom
-			},
-			children: [ //三级
-				{
-					path: "/*",
-					components: {
-						"middle_up": middle_up,
-						"middle_down": middle_down
-					},
-					children: [//四级
-					]
-				}
+			path: "/middle", component: middle,
+			children: [
+				{path: "/App", component: middle_down}
 			]
 		}
+		
 		
 	]
 });
