@@ -1,5 +1,5 @@
 <template>
-	<div id="middle"></div>
+	<div id="middle"  class="container"></div>
 </template>
 
 <script>
@@ -10,6 +10,6 @@
 	#middle {
 		background-color: antiquewhite;
 		border: black solid 1px;
-		height: 500px;
+		height: 600px;
 	}
 </style>

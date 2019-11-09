@@ -14,7 +14,7 @@ import bottom from '../vue/bottom.vue';
 
 //三级
 import top_logo from '../vue/top_logo.vue';
-import top_middle from '../vue/top_middle.vue';
+import top_left from '../vue/top_left.vue';
 import top_right from '../vue/top_right.vue';
 
 
@@ -28,8 +28,7 @@ var router = new VueRouter({
 			},
 			children: [
 				{path: "/*", components: {
-					"top_logo": top_logo,
-					"top_middle": top_middle,
+					"top_left": top_left,
 					"top_right": top_right
 					},
 				}

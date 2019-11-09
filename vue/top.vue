@@ -1,7 +1,6 @@
 <template>
 	<div id="top">
-		<router-view name="top_logo"></router-view>
-		<router-view name="top_middle"></router-view>
+		<router-view name="top_left"></router-view>
 		<router-view name="top_right"></router-view>
 	</div>
 </template>
@@ -22,9 +21,9 @@
 
 <style scoped="scoped">
 	#top {
-		background-color: aqua;
+		background-color: black;
 		border: black solid 1px;
-		height: 100px;
+		height: 50px;
 	}
 	
 </style>

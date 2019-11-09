@@ -1,18 +1,18 @@
 <template>
-	<div id="top_right">
+	<div id="top_left">
 		<div style="float: left;">
 			<a @click.prevent="" style="color: white;">
-				<label class="glyphicon glyphicon-user">登录&nbsp;|&nbsp;</label>
+				<label class="">首页&nbsp;|&nbsp;</label>
 			</a>
 		</div>
 		<div style="float: left;">
 			<a @click.prevent="" style="color: white;">
-				<label class="glyphicon glyphicon-plus">注册&nbsp;|&nbsp;</label>
+				<label class="">网站后台&nbsp;|&nbsp;</label>
 			</a>
 		</div>
 		<div style="float: left;">
 			<a @click.prevent="" style="color: white;">
-				<label class="glyphicon glyphicon-log-out">退出</label>
+				<label class="">问题反馈</label>
 			</a>
 		</div>
 	</div>
@@ -33,10 +33,10 @@
 </script>
 
 <style scoped="scoped">
-	#top_right {
+	#top_left {
 		height: 100%;
-		float: right;
-		margin-right: 170px;
+		float: left;
+		margin-left: 170px;
 		margin-top: 10px;
 	}
 </style>
