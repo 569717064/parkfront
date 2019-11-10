@@ -2,9 +2,9 @@
 	<div>
 		<div id="top">
 			<div id="top_left">
-				<router-link to="/">首页&nbsp;&nbsp;|&nbsp;&nbsp;</router-link>
-				<router-link to="">网站后台&nbsp;&nbsp;|&nbsp;&nbsp;</router-link>
-				<router-link to="">问题反馈</router-link>
+				<router-link to="/App">首页&nbsp;&nbsp;|&nbsp;&nbsp;</router-link>
+				<router-link to="/a">网站后台&nbsp;&nbsp;|&nbsp;&nbsp;</router-link>
+				<router-link to="/b">问题反馈</router-link>
 			</div>
 			
 			<div id="top_right">
@@ -14,12 +14,12 @@
 					</router-link>
 				</div>
 				<div style="float: left;">
-					<router-link to="">
+					<router-link to="/register">
 						<label class="glyphicon glyphicon-plus"></label>注册&nbsp;|&nbsp;
 					</router-link>
 				</div>
 				<div style="float: left;">
-					<router-link to="">
+					<router-link to="/c">
 						<label class="glyphicon glyphicon-log-out"></label>退出
 					</router-link>
 				</div>

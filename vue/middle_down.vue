@@ -54,7 +54,6 @@
 
 <style scoped="scoped">
 	#middle_down {
-		background-color: aqua;
 		height: 500px;
 	}
 </style>
