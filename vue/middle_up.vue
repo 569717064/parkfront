@@ -4,12 +4,20 @@
 			<img id="logo" src="../images/logo.png" class="img-responsive" alt="logo" style="width: 100px;">
 		</div>
 		<div id="middle_up_menu">
-			<router-link to="/d">鬼知道写啥&nbsp;&nbsp;</router-link>
-			<router-link to="/e">根本不知道&nbsp;&nbsp;</router-link>
-			<router-link to="/f">想写啥写啥&nbsp;&nbsp;</router-link>
-			<router-link to="/g">你开心就好&nbsp;&nbsp;</router-link>
-			<router-link to="/h">不知道说啥&nbsp;&nbsp;</router-link>
-			<router-link to="/i">随性而为之&nbsp;&nbsp;</router-link>
+			<ul class="layui-nav">
+				<li class="layui-nav-item">
+					<router-link to="/d">鬼知道写啥&nbsp;&nbsp;</router-link>
+				</li>
+				<li class="layui-nav-item">
+					<router-link to="/e">根本不知道&nbsp;&nbsp;</router-link>
+				</li>
+				<li class="layui-nav-item">
+					<router-link to="/f">想写啥写啥&nbsp;&nbsp;</router-link>
+				</li>
+				<li class="layui-nav-item">
+					<router-link to="/g">你开心就好&nbsp;&nbsp;</router-link>
+				</li>
+			</ul>
 		</div>
 		<div id="mmiddle_up_search">
 			<div class="input-group" style="margin-top: 40px;">

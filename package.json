@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"dev": ".\\node_modules\\.bin\\webpack-dev-server --port 9999 --hot",
-	"wp": ".\\node_modules\\.bin\\webpack"
+    "dev": ".\\node_modules\\.bin\\webpack-dev-server --port 9999 --hot",
+    "wp": ".\\node_modules\\.bin\\webpack"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "bootstrap3": "^3.3.5",
     "jquery": "^3.4.1",
     "layui-layer": "^1.0.9",
+    "layui-src": "^2.5.5",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3"
   },

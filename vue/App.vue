@@ -3,8 +3,8 @@
 		<div id="top">
 			<div id="top_left">
 				<router-link to="/App">首页&nbsp;&nbsp;|&nbsp;&nbsp;</router-link>
-				<router-link to="/a">网站后台&nbsp;&nbsp;|&nbsp;&nbsp;</router-link>
-				<router-link to="/b">问题反馈</router-link>
+				<router-link to="/expect">网站后台&nbsp;&nbsp;|&nbsp;&nbsp;</router-link>
+				<router-link to="/xx">问题反馈</router-link>
 			</div>
 			
 			<div id="top_right">

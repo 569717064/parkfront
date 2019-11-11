@@ -10,6 +10,8 @@ import App from '../vue/App.vue';
 //二级
 import middle from '../vue/middle.vue';
 import login from '../vue/login.vue';
+import expect from '../vue/expect.vue';
+
 
 
 //三级
@@ -26,6 +28,7 @@ var router = new VueRouter({
 	routes: [
 		{path: "/", redirect: "/App"},
 		{path: "/login", component: login},
+		{path: "/expect", component: expect},
 		{
 			path: "/middle", component: middle,
 			children: [
