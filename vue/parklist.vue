@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 	<div>
 		<div>
 			<router-view name="middle_up"></router-view>
@@ -62,6 +63,69 @@
 			</table>
 
 
+=======
+	<div class="addPark">
+		<div>
+			<router-view name="middle_up"></router-view>
+		</div>
+		<table class="table table-hover table-striped table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th>车位编号</th>
+					<th>车位号码</th>
+					<th>车位状态</th>
+					<th>租金:￥/时</th>
+					<th>租金:￥/天</th>
+					<th>租金:￥/周</th>
+					<th>所属人</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>
+						<button class="btn btn-success" click="localtion.href='#'">修改</button>
+						<button class="btn btn-danger" click="localtion.href='#'">删除</button>
+					</th>
+				</tr>
+				<tr>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>
+						<button class="btn btn-success" click="localtion.href='#'">修改</button>
+						<button class="btn btn-danger" click="localtion.href='#'">删除</button>
+					</th>
+				</tr>
+				<tr>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>111</th>
+					<th>
+						<button class="btn btn-success" click="localtion.href='#'">修改</button>
+						<button class="btn btn-danger" click="localtion.href='#'">删除</button>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+
+		
+>>>>>>> 061e43eca53f4def0e0d369eb2e62b94b969b14f
 			<button id="showModelBtn" class="btn btn-primary btn-middle" data-toggle="modal" data-target="#addParkModal">添加车位</button>
 			<!-- 模态框 -->
 			<div class="modal fade" id="addParkModal" tabindex="-1" role="dialog">
@@ -122,7 +186,10 @@
 					</div>
 				</div>
 			</div>
+<<<<<<< HEAD
 		</div>
+=======
+>>>>>>> 061e43eca53f4def0e0d369eb2e62b94b969b14f
 	</div>
 </template>
 
@@ -156,10 +223,16 @@
 	}
 
 	.addPark {
+<<<<<<< HEAD
 		height: 400px;
 		width: 100%;
 	}
 	.write {
 		height: 20px;
 	}
+=======
+		height: 600px;
+		width: 100%;
+	}
+>>>>>>> 061e43eca53f4def0e0d369eb2e62b94b969b14f
 </style>
