@@ -10,14 +10,15 @@ import App from '../vue/App.vue';
 //二级
 import middle from '../vue/middle.vue';
 import login from '../vue/login.vue';
+import register from '../vue/register.vue';
 import expect from '../vue/expect.vue';
-
+import feedback from '../vue/feedback.vue';
 
 
 //三级
 import middle_up from '../vue/middle_up.vue';
 import middle_down from '../vue/middle_down.vue';
-
+import parklist from '../vue/parklist.vue';
 
 //四级
 
@@ -28,7 +29,9 @@ var router = new VueRouter({
 	routes: [
 		{path: "/", redirect: "/App"},
 		{path: "/login", component: login},
+		{path: "/register", component: register},
 		{path: "/expect", component: expect},
+		{path: "/feedback", component: feedback},
 		{
 			path: "/middle", component: middle,
 			children: [
@@ -40,6 +43,16 @@ var router = new VueRouter({
 				},
 			]
 		},
+		{
+			path: "/parklist", component: parklist,
+			children: [
+				{path: "/parklist", components: {
+					"middle_up": middle_up
+					}
+				}
+			]
+			
+		}
 		
 	]
 });

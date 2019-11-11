@@ -4,20 +4,10 @@
 			<img id="logo" src="../images/logo.png" class="img-responsive" alt="logo" style="width: 100px;">
 		</div>
 		<div id="middle_up_menu">
-			<ul class="layui-nav">
-				<li class="layui-nav-item">
-					<router-link to="/d">鬼知道写啥&nbsp;&nbsp;</router-link>
-				</li>
-				<li class="layui-nav-item">
-					<router-link to="/e">根本不知道&nbsp;&nbsp;</router-link>
-				</li>
-				<li class="layui-nav-item">
-					<router-link to="/f">想写啥写啥&nbsp;&nbsp;</router-link>
-				</li>
-				<li class="layui-nav-item">
-					<router-link to="/g">你开心就好&nbsp;&nbsp;</router-link>
-				</li>
-			</ul>
+			<router-link to="/parklist">添加车位&nbsp;&nbsp;</router-link>
+			<router-link to="/e">代办事项&nbsp;&nbsp;</router-link>
+			<router-link to="/f">想写啥写啥&nbsp;&nbsp;</router-link>
+			<router-link to="/g">个人中心&nbsp;&nbsp;</router-link>
 		</div>
 		<div id="mmiddle_up_search">
 			<div class="input-group" style="margin-top: 40px;">

@@ -4,7 +4,7 @@
 			<div id="top_left">
 				<router-link to="/App">首页&nbsp;&nbsp;|&nbsp;&nbsp;</router-link>
 				<router-link to="/expect">网站后台&nbsp;&nbsp;|&nbsp;&nbsp;</router-link>
-				<router-link to="/xx">问题反馈</router-link>
+				<router-link to="/feedback">问题反馈</router-link>
 			</div>
 			
 			<div id="top_right">
@@ -19,7 +19,7 @@
 					</router-link>
 				</div>
 				<div style="float: left;">
-					<router-link to="/c">
+					<router-link to="/out">
 						<label class="glyphicon glyphicon-log-out"></label>退出
 					</router-link>
 				</div>
