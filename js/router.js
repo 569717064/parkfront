@@ -20,7 +20,7 @@ import middle_down from '../vue/middle_down.vue';
 
 
 //四级
-
+import parklist from '../vue/parklist.vue';
 
 
 
@@ -40,6 +40,15 @@ var router = new VueRouter({
 				},
 			]
 		},
+		{path: "/parklist", component: parklist,
+			children:[
+				{
+					path: "/parklist", components: {
+						"middle_up": middle_up
+					}
+				}
+			]
+		}
 		
 	]
 });

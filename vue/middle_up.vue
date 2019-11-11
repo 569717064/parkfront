@@ -6,7 +6,7 @@
 		<div id="middle_up_menu">
 			<ul class="layui-nav">
 				<li class="layui-nav-item">
-					<router-link to="/d">鬼知道写啥&nbsp;&nbsp;</router-link>
+					<router-link to="/parklist">添加车位&nbsp;&nbsp;</router-link>
 				</li>
 				<li class="layui-nav-item">
 					<router-link to="/e">根本不知道&nbsp;&nbsp;</router-link>
