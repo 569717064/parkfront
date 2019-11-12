@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
 	<div id="register">
 
 		<div id="register_input" class="col col-md-6 col-md-offset-4">
@@ -59,42 +58,6 @@
 						<td></td>
 					</tr>
 				</table>
-
-
-=======
-	<div  id="register">
-		<div class="col col-md-4 col-md-offset-4">
-			<form >
-				<div class="">
-					<label for="name">账号</label>
-					<input type="text" class="form-control" id="name" :placeholder="unameMsg">
-				</div>
-				<div class="">
-					<label for="name">密码</label>
-					<input type="text" class="form-control" id="name" :placeholder="upwdMsg">
-				</div>
-				<div class="">
-					<label for="name">确认密码</label>
-					<input type="text" class="form-control" id="name" :placeholder="upwd2Msg">
-				</div>
-				<div class="">
-					<label for="name">请选择角色</label>
-					<select class="form-control">
-						<option>1</option>
-						<option>2</option>
-					</select>
-				</div>
-				<div class="">
-					<label for="name">请输入邮箱</label>
-					<input type="text" class="form-control" id="name" placeholder="请输入邮箱">
-				</div>
-				<div class="right fl"><button class="btn btn-info" @click="" type="button">发送手机验证码</button></div>
-				<div class="">
-					<label for="name">请输入验证码</label>
-					<input type="text" class="form-control" id="name" :placeholder="codeMsg">
-				</div>
-				<button type="submit" class="btn btn-warning btn-block">立即注册</button>
->>>>>>> 45adf2b4a4543603ccdc1a8305bc56d6dc45d863
 			</form>
 		</div>
 	</div>
