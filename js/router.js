@@ -22,7 +22,7 @@ import parklist from '../vue/parklist.vue';
 import middle_backlog_show from '../vue/middle_backlog_show.vue';
 
 //四级
-import parklist from '../vue/parklist.vue';
+
 
 
 
@@ -44,16 +44,7 @@ var router = new VueRouter({
 				},
 			]
 		},
-<<<<<<< HEAD
-		{path: "/parklist", component: parklist,
-			children:[
-				{
-					path: "/parklist", components: {
-						"middle_up": middle_up
-					}
-				}
-			]
-=======
+
 		{
 			path: "/parklist", component: parklist,
 			children: [
@@ -73,7 +64,6 @@ var router = new VueRouter({
 				} 
 		   ]
 		   
->>>>>>> 061e43eca53f4def0e0d369eb2e62b94b969b14f
 		}
 		
 	]
