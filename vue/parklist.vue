@@ -1,4 +1,6 @@
 <template>
+
+
 	<div>
 		<div>
 			<router-view name="middle_up"></router-view>
@@ -129,9 +131,9 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
-	</div>
-	</div>
+
 	</div>
 </template>
 
@@ -194,5 +196,6 @@
 	.addPark {
 		height: 600px;
 		width: 100%;
+
 	}
 </style>

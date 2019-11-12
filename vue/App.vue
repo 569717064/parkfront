@@ -19,9 +19,10 @@
 					</router-link>
 				</div>
 				<div style="float: left;">
-					<router-link to="/out">
-						<label class="glyphicon glyphicon-log-out"></label>退出
-					</router-link>
+						<a @click="logout">
+						<label class="glyphicon glyphicon-log-out"></label>
+						 <span  >退出</span>
+						</a>
 				</div>
 			</div>
 		</div>
@@ -32,6 +33,7 @@
 		<div id="bottom">
 			<hr>
 			<span>蜗牛共享车位项目小组&copy;版权所有</span>
+			
 		</div>
 	</div>
 </template>
@@ -39,7 +41,7 @@
 <script>
 	export default {
 		created() {
-	
+			
 		},
 		data() {
 			return {
@@ -47,7 +49,13 @@
 			}
 		},
 		methods: {
-			
+			logout(){
+				axios("/logout",{
+					
+				}).then(()=>{
+					this.$router.push("/login")
+				})
+			}
 		}
 		
 		
