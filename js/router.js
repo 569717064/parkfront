@@ -20,6 +20,8 @@ import middle_up from '../vue/middle_up.vue';
 import middle_down from '../vue/middle_down.vue';
 import parklist from '../vue/parklist.vue';
 import middle_backlog_show from '../vue/middle_backlog_show.vue';
+import comments from '../vue/comments.vue';
+
 
 //四级
 
@@ -46,8 +48,9 @@ var router = new VueRouter({
 		{
 			path: "/parklist", component: parklist,
 			children: [
-				{path: "/parklist", components: {
-					"middle_up": middle_up
+				{
+					path: "/parklist", components: {
+						"middle_up": middle_up
 					}
 				}
 			]
@@ -56,13 +59,14 @@ var router = new VueRouter({
 		{
 		    path: "/middle_backlog_show", component: middle_backlog_show,
 		    children: [
-				{path: "/middle_backlog_show", components: {
-					"middle_up": middle_up
+				{
+					path: "/middle_backlog_show", components: {
+						"middle_up": middle_up
 					}
 				} 
 		   ]
 		   
-		}
+		},
 		
 	]
 });
