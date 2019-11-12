@@ -9,6 +9,7 @@ import VueRouter from 'vue-router';
 
 
 axios.defaults.baseURL = "http://192.168.174.1:8888";
+// axios.defaults.baseURL = "http://localhost:8080";
 Vue.use(VueRouter);
 
 import router from './router.js';
