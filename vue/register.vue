@@ -4,11 +4,11 @@
 			<form >
 				<div class="">
 					<label for="name">账号</label>
-					<input type="text" class="form-control" id="name" :placeholder="userMsg" v-model="uname">
+					<input type="text" class="form-control" id="name" :placeholder="unameMsg">
 				</div>
 				<div class="">
 					<label for="name">密码</label>
-					<input type="text" class="form-control" id="name" :placeholder="upwdMsg" v-model="upwd">
+					<input type="text" class="form-control" id="name" :placeholder="upwdMsg">
 				</div>
 				<div class="">
 					<label for="name">确认密码</label>
@@ -23,9 +23,9 @@
 				</div>
 				<div class="">
 					<label for="name">请输入邮箱</label>
-					<input type="text" class="form-control" id="name" :placeholder="请输入邮箱">
+					<input type="text" class="form-control" id="name" placeholder="请输入邮箱">
 				</div>
-				<div class="right fl"><button class="btn btn-info" @click="getTelCode" type="button">发送手机验证码</button></div>
+				<div class="right fl"><button class="btn btn-info" @click="" type="button">发送手机验证码</button></div>
 				<div class="">
 					<label for="name">请输入验证码</label>
 					<input type="text" class="form-control" id="name" :placeholder="codeMsg">

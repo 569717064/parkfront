@@ -8,6 +8,7 @@ import Vue from 'vue/dist/vue.js';
 import VueRouter from 'vue-router';
 
 axios.defaults.baseURL = "http://localhost:8888";
+
 Vue.use(VueRouter);
 
 axios.defaults.withCredentials = true;

@@ -31,7 +31,9 @@
 		<router-view></router-view>
 		
 		<div id="bottom">
+			<hr>
 			<span>蜗牛共享车位项目小组&copy;版权所有</span>
+			
 		</div>
 	</div>
 </template>
@@ -86,10 +88,9 @@
 	
 	/* bottom start */
 	#bottom {
-		background-color: cornsilk;
 		height: 100px;
 		text-align: center;
-		font-size: 30px;
+		font-size: 20px;
 	}
 	/* bottom end */
 </style>

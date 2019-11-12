@@ -24,8 +24,6 @@ import middle_backlog_show from '../vue/middle_backlog_show.vue';
 //四级
 
 
-
-
 var router = new VueRouter({
 	routes: [
 		{path: "/", redirect: "/App"},
