@@ -23,7 +23,7 @@
 				</div>
 				<div class="">
 					<label for="name">请输入邮箱</label>
-					<input type="text" class="form-control" id="name" :placeholder="请输入邮箱">
+					<input type="text" class="form-control" id="name" placeholder="请输入邮箱">
 				</div>
 				<div class="right fl"><button class="btn btn-info" @click="" type="button">发送手机验证码</button></div>
 				<div class="">
