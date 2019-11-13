@@ -57,7 +57,7 @@
 	}
 </script>
 
-<style scoped="scoped">
+<style>
 	.table {
 		border: #FAEBD7 solid 2px;
 		width: 1400px;

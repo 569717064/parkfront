@@ -29,65 +29,85 @@ import comments from '../vue/comments.vue';
 
 
 var router = new VueRouter({
-	routes: [
-		{path: "/", redirect: "/App"},
-		{path: "/login", component: login},
-		{path: "/register", component: register},
-		{path: "/expect", component: expect},
-		{path: "/feedback", component: feedback},
+	routes: [{
+			path: "/",
+			redirect: "/App"
+		},
 		{
-			path: "/middle", component: middle,
-			children: [
-				{
-					path: "/App", components: {
-						"middle_up": middle_up,
-						"middle_down": middle_down
-					}
-				},
-			]
+			path: "/login",
+			component: login
+		},
+		{
+			path: "/register",
+			component: register
+		},
+		{
+			path: "/expect",
+			component: expect
+		},
+		{
+			path: "/feedback",
+			component: feedback
+		},
+		{
+			path: "/middle",
+			component: middle,
+			children: [{
+				path: "/App",
+				components: {
+					"middle_up": middle_up,
+					"middle_down": middle_down
+				}
+			}, ]
 		},
 
 		{
-			path: "/parklist", component: parklist,
-			children: [
-				{path: "/parklist", components: {
+			path: "/parklist",
+			component: parklist,
+			children: [{
+				path: "/parklist",
+				components: {
 					"middle_up": middle_up
+				}
+			}]
+
+		},
+		{
+			path: "/middle_backlog_show",
+			component: middle_backlog_show,
+			children: [{
+				path: "/middle_backlog_show",
+				components: {
+					"middle_up": middle_up
+				}
+			}]
+
+		},
+		{
+			path: "/mymessage",
+			component: mymessage,
+			children: [{
+					path: "/mymessage",
+					components: {
+						"middle_up": middle_up,
+
 					}
 				}
+
 			]
-			
 		},
 		{
-		    path: "/middle_backlog_show", component: middle_backlog_show,
-		    children: [
-				{path: "/middle_backlog_show", components: {
-					"middle_up": middle_up
-					}
-				} 
-		   ]
-		   
-		},
-		{
-		    path: "/mymessage", component: mymessage,
-		    children: [{
-				path: "/mymessage",components: {
-					"middle_up": middle_up,
-		
+			path: "/history",
+			component: history,
+			children: [{
+					path: "/history",
+					components: {
+						"middle_up": middle_up,
+
 					}
 				}
-		
-		   ]
-		},
-		{
-		    path: "/history",component: history,
-		    children: [{
-				path: "/history",components: {
-					"middle_up": middle_up,
-		
-					}
-				}
-		
-		   ]
+
+			]
 		},
 		{
 		    path: "/comments",component: comments,
