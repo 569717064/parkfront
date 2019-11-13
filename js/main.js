@@ -12,6 +12,7 @@ import VueRouter from 'vue-router';
 axios.defaults.baseURL = "http://localhost:8888";
 Vue.use(VueRouter);
 
+//允许前端携带cookie
 axios.defaults.withCredentials = true;
 import router from './router.js';
 

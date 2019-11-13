@@ -22,7 +22,7 @@ import parklist from '../vue/parklist.vue';
 import middle_backlog_show from '../vue/middle_backlog_show.vue';
 import mymessage from '../vue/mymessage.vue';
 import history from '../vue/history.vue';
-
+import comments from '../vue/comments.vue';
 
 //四级
 
@@ -82,6 +82,17 @@ var router = new VueRouter({
 		    path: "/history",component: history,
 		    children: [{
 				path: "/history",components: {
+					"middle_up": middle_up,
+		
+					}
+				}
+		
+		   ]
+		},
+		{
+		    path: "/comments",component: comments,
+		    children: [{
+				path: "/comments",components: {
 					"middle_up": middle_up,
 		
 					}

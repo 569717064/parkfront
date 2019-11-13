@@ -6,17 +6,7 @@
 		<div id="middle_up_menu">
 			<router-link to="/parklist">添加车位&nbsp;&nbsp;</router-link>
 			<router-link to="/middle_backlog_show">代办事项&nbsp;&nbsp;</router-link>
-			<div id="comments" class="dropdown">
-				<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">评论大厅&nbsp;&nbsp;</a>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					<li>
-						<router-link to="/xxxxx">关于我的评论</router-link>
-					</li>
-					<li>
-						<router-link to="/yyyyy">全部评论</router-link>
-					</li>
-				</ul>
-			</div>
+			<router-link to="/comments">评论大厅&nbsp;&nbsp;</router-link>
 			<div class="dropdown">
 				<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">个人中心</a>
 				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -71,7 +61,7 @@
 
 	#mmiddle_up_search {
 		float: right;
-		width: 260px;
+		width: 250px;
 		height: 100%;
 		margin-right: -130px;
 	}
@@ -87,9 +77,6 @@
 	ul {
 		margin-left: 250px;
 		margin-top: 80px;
-	}
-	#comments ul{
-		margin-left: 150px;
 	}
 	 
 </style>
