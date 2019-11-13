@@ -23,6 +23,7 @@ import middle_backlog_show from '../vue/middle_backlog_show.vue';
 import mymessage from '../vue/mymessage.vue';
 import history from '../vue/history.vue';
 
+
 //四级
 
 
@@ -108,7 +109,7 @@ var router = new VueRouter({
 
 			]
 		},
-
+		
 	]
 });
 

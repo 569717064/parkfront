@@ -4,14 +4,21 @@
 			<img id="logo" src="../images/logo.png" class="img-responsive" alt="logo" style="width: 100px;">
 		</div>
 		<div id="middle_up_menu">
-			<router-link to="/d">鬼知道写啥&nbsp;&nbsp;</router-link>
-			<router-link to="/e">根本不知道&nbsp;&nbsp;</router-link>
-			<router-link to="/f">想写啥写啥&nbsp;&nbsp;</router-link>
-			<router-link to="/g">你开心就好&nbsp;&nbsp;</router-link>
+			<router-link to="/parklist">添加车位&nbsp;&nbsp;</router-link>
+			<router-link to="/middle_backlog_show">代办事项&nbsp;&nbsp;</router-link>
+			<div id="comments" class="dropdown">
+				<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">评论大厅&nbsp;&nbsp;</a>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					<li>
+						<router-link to="/xxxxx">关于我的评论</router-link>
+					</li>
+					<li>
+						<router-link to="/yyyyy">全部评论</router-link>
+					</li>
+				</ul>
+			</div>
 			<div class="dropdown">
-				<a id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-					个人中心
-				</a>
+				<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">个人中心</a>
 				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 					<li>
 						<router-link to="/mymessage">我的信息</router-link>
@@ -73,15 +80,20 @@
 		float: left;
 		margin-top: 50px;
 		font-size: 20px;
-		color: #000000;
+		cursor:pointer;
+		
+	}
+	
+	ul {
+		margin-left: 250px;
+		margin-top: 80px;
+	}
+	#comments ul{
+		margin-left: 150px;
 	}
 
 	#dropdownMenu1 {
 		margin-top: 50px;
 	}
 	
-	ul {
-		margin-left: 400px;
-		margin-top: 80px;
-	}
 </style>
