@@ -38,7 +38,7 @@
 					</tr><br>
 					<tr>
 						<td><label for="name">请输入邮箱：</label></td>
-						<td><input type="text" class="form-control" placeholder="请输入邮箱"></td>
+						<td><input type="text" class="form-control" placeholder="请输入邮箱" v-model="email2"></td>
 						<td><label for="name">
 								<font :style="{'color': (flag4==true?'green':'red')}">&nbsp;{{email}}</font>
 							</label></td>
@@ -73,7 +73,7 @@
 				upwd2Msg: '两次密码要输入一致哦',
 				email: '填写下邮箱号吧，方便我们联系您！',
 				codeMsg: '邮箱号号码输入正确后才可发送验证码哦~',
-				
+
 
 				flag: "",
 				flag2: "",
@@ -81,43 +81,43 @@
 				flag4: "",
 
 				uname: "",
-				rid:"",
+				rid: "",
 				upwd: "",
 				upwd2: "",
-				emial: "",
-				rids:[1,2]
-				
+				email2:"",
+				rids: [1, 2]
+
 			};
 		},
 
 		methods: {
 			created() {
-				
+
 			},
 			register() {
-				if((!this.flag)&&(!this.flag2)&&(this.flag3)&&(!this.flag4)){
+				if ((!this.flag) || (!this.flag2) || (!this.flag3) || (!this.flag4)) {
 					layer.msg("您输入有误请重新输入");
+				} else {
+					axios.post("/users/register", {
+							username: this.uname,
+							password: this.upwd,
+							rid: this.rid,
+							email: this.email2,
+						})
+						.then((response) => {
+							var ss = response.data;
+							if (ss == false) {
+								layer.msg("账号已存在，请重新输入");
+
+							} else {
+								layer.msg("注册成功！");
+								this.$router.push("/login");
+							}
+						})
 				}
-				else{
-					axios.post("/users/register",{
-						username:this.uname,
-						password:this.upwd,
-						rid:this.rid,
-					})
-					.then((response)=>{
-						var ss = response.data;
-						if(ss==false){
-							layer.msg("账号已存在，请重新输入");
-							
-						}else{
-							layer.msg("注册成功！");
-							this.$router.push("/login");
-						}
-					})
-				}
-				
+
 			},
-			
+
 
 		},
 		watch: {
@@ -150,6 +150,17 @@
 				} else {
 					this.upwd2Msg = "您两次输入的密码不一致，请重新输入"
 					this.flag3 = false;
+				}
+			},
+			email2(val) {
+				var uemail = new RegExp("^[A-Za-z0-9][a-zA-Z0-9_]{1,}@(([a-zA-z0-9]-*){1,}\\.){1,3}[a-zA-z\\-]{1,3}");
+				var useremail = uemail.test(val);
+				if(useremail){
+					this.email = '正确';
+					this.flag4 = true;
+				}else {
+					this.email = '您输入的邮箱格式有误，请重新输入';
+					this.flag4 = false;
 				}
 			}
 		}
