@@ -8,10 +8,13 @@ import Vue from 'vue/dist/vue.js';
 import VueRouter from 'vue-router';
 
 
+
 // axios.defaults.baseURL = "http://192.168.174.1:8888";
 axios.defaults.baseURL = "http://localhost:8888";
 Vue.use(VueRouter);
 
+//允许前端携带cookie
+axios.defaults.withCredentials = true;
 import router from './router.js';
 
 //一级
@@ -24,6 +27,7 @@ window.jQuery = $;
 window.axios = axios;
 window.Vue = Vue;
 window.VueRouter = VueRouter;
+window.layer = layer;
 
 
 

@@ -113,6 +113,14 @@
 
 <script>
 	export default {
+		created() {
+			axios.post("/isLogin")
+				.then((response)=>{
+					if (!response.data.isLogin) {
+						this.$router.push("/login");
+					}
+				})
+		},
 		data() {
 			return {
 				park_num: "",
@@ -123,12 +131,6 @@
 				weekprice: ""
 			}
 		},
-		// beforeCreate() {
-		// 
-		// },
-		// mounted() { 
-		// 	this.findAll();
-		// },
 		methods: {
 			// findAll(){
 			// 	axios.get("/parkplaces")
@@ -176,5 +178,6 @@
 	.addPark {
 		height: 600px;
 		width: 100%;
+
 	}
 </style>
