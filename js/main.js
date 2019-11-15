@@ -8,7 +8,8 @@ import Vue from 'vue/dist/vue.js';
 import VueRouter from 'vue-router';
 
 
-/* axios.defaults.baseURL = "http://192.168.174.1:8888"; */
+
+// axios.defaults.baseURL = "http://192.168.174.1:8888";
 axios.defaults.baseURL = "http://localhost:8888";
 Vue.use(VueRouter);
 
@@ -21,12 +22,12 @@ import App from '../vue/App.vue';
 
 
 
-// window.$ = $;
-// window.jQuery = $;
+window.$ = $;
+window.jQuery = $;
 window.axios = axios;
+window.Vue = Vue;
+window.VueRouter = VueRouter;
 window.layer = layer;
-// window.Vue = Vue;
-// window.VueRouter = VueRouter;
 
 
 

@@ -1,6 +1,5 @@
 <template>
 	<div id="register">
-
 		<div id="register_input" class="col col-md-6 col-md-offset-4">
 			<form>
 				<table class="table">
