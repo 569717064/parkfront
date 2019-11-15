@@ -38,12 +38,7 @@
 <script>
 	export default {
 		created() {
-			axios.post("/isLogin")
-				.then((response)=>{
-					if (!response.data.isLogin) {
-						this.$router.push("/login");
-					}
-				})
+			
 		},
 		data() {
 			return {
@@ -57,7 +52,7 @@
 	}
 </script>
 
-<style>
+<style scoped="scoped">
 	.table {
 		border: #FAEBD7 solid 2px;
 		width: 1400px;

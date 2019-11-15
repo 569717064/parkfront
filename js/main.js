@@ -31,6 +31,29 @@ window.layer = layer;
 
 
 
+
+
+router.beforeEach((to,from,next)=>{
+	if (to.path == "/login") {
+		next();
+	} else if(to.path == "/register"){
+		next();
+	} else if(to.path == "/App"){
+		next();
+	}else{
+		axios.post("/isLogin")
+		.then((response)=>{
+			if (response.data.isLogin) {
+				next();
+			}else{
+				next({path: "/login"});
+			}
+		})
+	}
+})
+
+
+
 var app = new Vue({
 	el: "#app",
 	render(c){

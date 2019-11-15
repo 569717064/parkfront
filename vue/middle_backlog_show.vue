@@ -46,12 +46,7 @@
 	
 	export default{
 		created() {
-			axios.post("/isLogin")
-				.then((response)=>{
-					if (!response.data.isLogin) {
-						this.$router.push("/login");
-					}
-				})
+			
 		},
 		data(){
 			

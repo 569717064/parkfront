@@ -68,18 +68,13 @@
 <script>
 	export default {
 		created() {
-			axios.post("/isLogin")
-				.then((response)=>{
-					if (!response.data.isLogin) {
-						this.$router.push("/login");
-					}
-				})
+			
 		},
 		data() {
 			return {
 				info: "",
-				index: "",
-				status: "",
+				index: 0,
+				status: 0,
 				uid: "",
 				uids : [
 					{uid:1,username:"aaaa"},
@@ -152,17 +147,18 @@
 
 			},
 			add2() {
+				console.log(this.uid +" "+ this.status + " "+ this.info)
 				axios.post("/comments",{
-					uid: this.uid,
+					info: this.info,
 					status: this.status,
-					info: this.info
+					uid: this.uid,
 				}).then(()=>{
 					layer.close(this.index);
 					layer.msg("添加成功");
 				}).catch(()=>{
 					layer.msg("添加失败");
 				});
-					
+				
 			}
 		}
 
