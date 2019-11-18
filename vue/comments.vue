@@ -22,27 +22,17 @@
 					</tr>
 				</tbody>
 			</table>
-			
 			<button @click="add()" class="btn btn-success">添加评论</button>
-			
 			<div id="commentsPage">
 				<nav aria-label="Page navigation">
 					<ul class="pagination">
-						<li>
-							<a href="#" aria-label="Previous">
-								<span aria-hidden="true">&laquo;</span>
-							</a>
-						</li>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li>
-							<a href="#" aria-label="Next">
-								<span aria-hidden="true">&raquo;</span>
-							</a>
-						</li>
+						<li><a @click.prevent="">首页</a></li>
+						<li><a @click.prevent="">上一页</a></li>
+						<li><a @click.prevent="">1</a></li>
+						<li><a @click.prevent="">2</a></li>
+						<li><a @click.prevent="">3</a></li>
+						<li><a @click.prevent="">下一页</a></li>
+						<li><a @click.prevent="">尾页</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -68,14 +58,22 @@
 <script>
 	export default {
 		created() {
+			axios.get("/comments/" + 0 +"/"+ 5
+			).then((response)=>{
+				this.list = response.data;
+			}).catch(()=>{
+				
+			});
 			
 		},
 		data() {
 			return {
 				info: "",
-				index: 0,
+				index: null,
 				status: 0,
-				uid: "",
+				uid: 0,
+				offset: 0,
+				limit: 0,
 				uids : [
 					{uid:1,username:"aaaa"},
 					{uid:2,username:"bbbb"},
@@ -83,55 +81,7 @@
 					{uid:4,username:"dddd"},
 					{uid:5,username:"eeee"},
 				],
-				list: [{
-						cid: 1,
-						info: "xxxxxxxxxxxxxx",
-						status: "好评",
-						uid: Math.ceil(Math.random() * 10 + 1)
-					},
-					{
-						cid: 2,
-						info: "xxxxxxxxxxxxxx",
-						status: "好评",
-						uid: Math.ceil(Math.random() * 10 + 1)
-					},
-					{
-						cid: 3,
-						info: "xxxxxxxxxxxxxx",
-						status: "好评",
-						uid: Math.ceil(Math.random() * 10 + 1)
-					},
-					{
-						cid: 4,
-						info: "xxxxxxxxxxxxxx",
-						status: "好评",
-						uid: Math.ceil(Math.random() * 10 + 1)
-					},
-					{
-						cid: 5,
-						info: "xxxxxxxxxxxxxx",
-						status: "好评",
-						uid: Math.ceil(Math.random() * 10 + 1)
-					},
-					{
-						cid: 6,
-						info: "xxxxxxxxxxxxxx",
-						status: "好评",
-						uid: Math.ceil(Math.random() * 10 + 1)
-					},
-					{
-						cid: 7,
-						info: "xxxxxxxxxxxxxx",
-						status: "好评",
-						uid: Math.ceil(Math.random() * 10 + 1)
-					},
-					{
-						cid: 8,
-						info: "xxxxxxxxxxxxxx",
-						status: "好评",
-						uid: Math.ceil(Math.random() * 10 + 1)
-					}
-				]
+				list: null,
 
 			}
 		},
@@ -144,7 +94,6 @@
 				  area: ['420px', '440px'], //宽高
 				  content: $("#addComment")
 				});
-
 			},
 			add2() {
 				console.log(this.uid +" "+ this.status + " "+ this.info)
@@ -158,7 +107,6 @@
 				}).catch(()=>{
 					layer.msg("添加失败");
 				});
-				
 			}
 		}
 
