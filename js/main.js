@@ -8,10 +8,13 @@ import Vue from 'vue/dist/vue.js';
 import VueRouter from 'vue-router';
 
 
+
 // axios.defaults.baseURL = "http://192.168.174.1:8888";
-axios.defaults.baseURL = "http://localhost:8888"
+axios.defaults.baseURL = "http://localhost:8888";
 Vue.use(VueRouter);
 
+//允许前端携带cookie
+axios.defaults.withCredentials = true;
 import router from './router.js';
 
 //一级
@@ -19,12 +22,36 @@ import App from '../vue/App.vue';
 
 
 
-// window.$ = $;
-// window.jQuery = $;
+window.$ = $;
+window.jQuery = $;
 window.axios = axios;
-// window.Vue = Vue;
-// window.VueRouter = VueRouter;
+window.Vue = Vue;
+window.VueRouter = VueRouter;
+window.layer = layer;
 
+
+
+
+
+
+router.beforeEach((to,from,next)=>{
+	if (to.path == "/login") {
+		next();
+	} else if(to.path == "/register"){
+		next();
+	} else if(to.path == "/App"){
+		next();
+	}else{
+		axios.post("/isLogin")
+		.then((response)=>{
+			if (response.data.isLogin) {
+				next();
+			}else{
+				next({path: "/login"});
+			}
+		})
+	}
+})
 
 
 

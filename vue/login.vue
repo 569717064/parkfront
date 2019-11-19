@@ -13,12 +13,12 @@
 							<div class="write"></div>
 							<div class="form-group">
 									<label for="name" style="float: left; font-size: 12px; line-height: 25px;">&nbsp;&nbsp;用户名:&nbsp;</label>
-									<input type="text"  class="form-control inputstyle" placeholder="请输入用户名">
+									<input type="text" v-model="username" ref="u"  class="form-control inputstyle" placeholder="请输入用户名">
 									<div class="height-write"></div>
 							</div>
 							<div class="form-group">
 									<label for="name" style="float: left;  font-size: 12px; line-height: 25px;" >&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;</label>
-									<input type="password" class="form-control inputstyle" placeholder="请输入密码">
+									<input type="password"  v-model="password" class="form-control inputstyle" placeholder="请输入密码" @keyup.enter="submit">
 									<div class="height-write"></div>
 							</div>
 							<div class="form-group">
@@ -29,9 +29,9 @@
 					
 						</div>
 						<div class="login-bottom">
-								<span class="left">{{error}}</span>
+								
 								<div class="height-write"></div>
-							<button type="button" class="submit " @click="login">立即登录</button>
+							<button type="button" class="submit "  @click="login">立即登录</button>
 						</div>
 					</div>
 				</div>
@@ -44,6 +44,47 @@
 		
 	</div>
 </template>
+
+
+
+<script>
+	export default{
+		data(){
+			return{
+				username:"",
+				password:""
+				
+			}
+			
+		},
+		methods:{
+			login(){
+				
+				axios.post("/login",{
+					"username":this.username,
+					"password":this.password
+				}).then(()=>{
+					this.$router.push("/parklist")
+				}).catch(()=>{
+					this.username = this.password = '';
+									
+					alert("用户名或密码失败");
+					
+					this.$refs.u.focus();
+					
+				})
+				
+			},
+			
+			submit(){
+				this.login();
+			}
+			
+			
+		}
+	}
+</script>
+
 
 <style scoped="scoped">
 	.loginstyle{
@@ -67,7 +108,8 @@
 		height: 500px;
 		
 		margin: 0px,auto;
-	
+		
+		
 		
 	
 	}
@@ -127,25 +169,3 @@
 		 line-height: 25px;
 	}
 </style>
-
-<script>
-	export default{
-		data(){
-			return{
-				error:"验证码错误。请重新刷新"
-			
-				
-			}
-			
-		},
-		methods:{
-			login(){
-				
-				
-			}
-			
-		}
-	}
-</script>
-
-

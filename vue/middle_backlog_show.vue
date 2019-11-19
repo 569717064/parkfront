@@ -61,10 +61,6 @@
 				list:null
 			}
 		},
-		methods:{
-			
-		},
-		
 		created() {
 			axios.get("/orders/"+1)
 				.then((response)=> {  
